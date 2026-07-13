@@ -1,6 +1,7 @@
 """
 Parses requirements.txt for PyPI dependencies using a robust library.
 """
+from __future__ import annotations
 import sys
 import re
 from pip_requirements_parser import RequirementsFile

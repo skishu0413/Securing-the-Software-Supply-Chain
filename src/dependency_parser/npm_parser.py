@@ -2,6 +2,7 @@
 Parses package-lock.json for npm dependencies.
 Supports lockfileVersion 1 (dependencies key) and versions 2/3 (packages key).
 """
+from __future__ import annotations
 import json
 
 
