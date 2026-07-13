@@ -1,0 +1,17 @@
+{
+  "pypi": [
+    "cvss",
+    "vantage6",
+    "pytest",
+    "aiohttp",
+    "vyper",
+    "salt",
+    "transformers",
+    "recurly",
+    "irrd"
+  ],
+  "npm": [],
+  "maven": [
+    "org.springframework.security:spring-security-core"
+  ]
+}

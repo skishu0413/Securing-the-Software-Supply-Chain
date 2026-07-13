@@ -1,0 +1,17 @@
+# Runtime dependencies (exact versions for reproducibility)
+# This file is named requirements-dev.txt (not requirements.txt) to distinguish
+# it from auto-generated lock files and to align with the pyproject.toml entry points.
+requests==2.32.3
+pip-requirements-parser==32.0.0
+pyyaml==6.0.2
+thefuzz==0.22.1
+python-Levenshtein>=0.26.0
+packaging>=21.0,<22.0
+aiohttp==3.9.5
+cvss==3.2
+defusedxml==0.7.1
+
+# Development tools
+pytest==8.3.2
+hypothesis==6.112.2
+flake8==7.1.1

@@ -1,0 +1,104 @@
+{
+  "character_substitutions": {
+    "o": [
+      "0",
+      "a"
+    ],
+    "0": [
+      "o"
+    ],
+    "l": [
+      "1"
+    ],
+    "1": [
+      "l"
+    ],
+    "rn": [
+      "m"
+    ],
+    "m": [
+      "rn"
+    ],
+    "a": [
+      "o"
+    ],
+    "e": [
+      "o"
+    ],
+    "i": [
+      "y"
+    ],
+    "y": [
+      "i"
+    ],
+    "u": [
+      "o"
+    ]
+  },
+  "common_prefixes": [
+    "py-",
+    "python-",
+    "js-",
+    "node-"
+  ],
+  "common_suffixes": [
+    "-py",
+    "-python",
+    "-js",
+    "-node",
+    "y",
+    "2",
+    "3"
+  ],
+  "package_name_patterns": {
+    "maven": {
+      "prefixes": {},
+      "suffixes": {
+        "-core": 2
+      },
+      "separators": {
+        ".": 19,
+        "-": 15
+      },
+      "length_distribution": {
+        "30": 7,
+        "50": 1,
+        "35": 4,
+        "20": 1,
+        "40": 3,
+        "25": 3,
+        "45": 1
+      }
+    },
+    "pypi": {
+      "prefixes": {
+        "python-": 4
+      },
+      "suffixes": {},
+      "separators": {
+        "-": 56
+      },
+      "length_distribution": {
+        "10": 46,
+        "0": 10,
+        "5": 94,
+        "15": 16,
+        "20": 10
+      }
+    }
+  },
+  "similarity_thresholds": {
+    "pypi": {
+      "existing": 80,
+      "missing": 75
+    },
+    "npm": {
+      "existing": 80,
+      "missing": 75
+    },
+    "maven": {
+      "existing": 80,
+      "missing": 75
+    }
+  }
+}

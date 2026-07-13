@@ -1,0 +1,205 @@
+# Configuration for the Dependency Security Scanner
+
+# Vulnerability database APIs
+osv_api_url: "https://api.osv.dev/v1/querybatch"
+nvd_api_url: "https://services.nvd.nist.gov/rest/json/cves/2.0"
+
+# Detection Configuration (Suspicious Package Detection)
+detection:
+  request_timeout: 1           # Reduced from 3s - timeout for PyPI/npm API requests (optimized for speed)
+  maven_request_timeout: 2     # Reduced from 5s - timeout for Maven Central API requests
+
+# NVD API Configuration
+nvd:
+  # Rate limiting (seconds between requests)
+  # NVD API limit: 50 requests per 30 seconds with API key = 1.67 req/sec
+  # Use conservative settings to stay well below limit
+  request_delay_with_key: 0.6      # 0.6s = ~1.6 req/sec (just under 1.67 req/sec limit)
+  request_delay_without_key: 6.0   # 6s = 5 req/30sec without key (NVD limit is 5 req/30sec)
+  rate_limit_delay: 60             # Wait full 60s when rate limited (double NVD reset period for safety)
+  max_rate_limit_retries: 2        # Allow 2 retries with exponential backoff
+  max_concurrent_requests: 2       # Reduce to 2 parallel requests to avoid overwhelming API
+  
+  # Search parameters
+  results_per_page: 100            # Results per API call
+  max_pages: 1                     # Only fetch first page (most critical CVEs are first)
+  request_timeout: 10              # Reduced from 30s to 10s for faster failure detection
+  
+  # Minimum CVSS score to consider (only configurable filter)
+  min_cvss_score: 3.0
+
+# Risk Scoring Configuration
+# Customize the weight distribution for different risk components
+# All weights should sum to 100% for proper scoring
+risk_weights:
+  base_severity: 35      # CVSS base severity score (0-35 points)
+  exploit_pressure: 25   # CISA KEV, EPSS, active exploitation indicators (0-25 points) 
+  exposure_context: 15   # Package type and exposure level analysis (0-15 points)
+  volume: 10             # Number of vulnerabilities with ecosystem normalization (0-10 points)
+  patch_gap: 10          # Availability of patches/fixes (0-10 points)
+  credibility: 5         # Source reputation and detail quality (0-5 points)
+
+# Exploit pressure scoring configuration
+exploit_pressure:
+  # Scoring for different exploit indicators (0.0-1.0 scale)
+  cisa_kev_listed: 1.0        # CVE is in CISA's Known Exploited Vulnerabilities catalog
+  high_confidence_exploited: 0.8   # "in the wild", "active exploitation" mentions
+  medium_confidence_exploited: 0.6  # "exploited", "actively exploited" mentions  
+  exploit_code_available: 0.4      # PoC, Metasploit modules available
+  exploit_db_reference: 0.3        # References to exploit databases
+
+# Risk Scoring Detection Patterns
+risk_scoring:
+  # CISA KEV API configuration
+  kev_api_url: "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
+  kev_cache_hours: 24        # Cache KEV data for 24 hours
+  
+  # EPSS (Exploit Prediction Scoring System) API configuration
+  epss_api_url: "https://api.first.org/data/v1/epss"
+  epss_cache_hours: 24       # Cache EPSS data for 24 hours
+  epss_batch_size: 30        # Number of CVEs to query in one batch
+  epss_high_threshold: 0.7   # EPSS score >= 0.7 considered high risk
+  epss_medium_threshold: 0.3 # EPSS score >= 0.3 considered medium risk
+  
+  # Vulnerability age thresholds (days)
+  very_recent_vuln_days: 30  # CVEs < 30 days old get boost
+  recent_vuln_days: 90       # CVEs < 90 days old considered recent
+  very_recent_boost: 0.2     # 20% boost for very recent vulnerabilities
+  recent_boost: 0.1          # 10% boost for recent vulnerabilities
+  
+  # Severity to score mapping (when CVSS unavailable)
+  severity_scores:
+    CRITICAL: 9.5
+    HIGH: 8.0
+    MODERATE: 5.5
+    LOW: 2.0
+    NONE: 0.0
+  
+  # KEV/Exploit indicators (text-based detection)
+  kev_indicators:
+    critical:
+      - "remote code execution"
+      - "arbitrary code execution"
+      - "code injection"
+      - "rce"
+      - "command injection"
+      - "deserialization"
+      - "untrusted data"
+      - "sql injection"
+      - "cross-site scripting"
+      - "xss"
+      - "directory traversal"
+      - "path traversal"
+      - "buffer overflow"
+      - "memory corruption"
+    high_confidence:
+      - "in the wild"
+      - "active exploitation"
+      - "cisa kev"
+      - "known exploited"
+      - "actively exploited"
+    medium_confidence:
+      - "exploited"
+      - "exploitation detected"
+      - "exploit available"
+      - "publicly exploited"
+    low_confidence:
+      - "exploit"
+      - "proof of concept"
+      - "poc"
+      - "metasploit"
+      - "exploit-db"
+  
+  # Patch availability indicators
+  patch_indicators:
+    high_confidence:
+      - "fixed in"
+      - "patched in"
+      - "resolved in"
+      - "fixed version"
+    medium_confidence:
+      - "update to"
+      - "upgrade to"
+      - "patched version"
+    low_confidence:
+      - "solution"
+      - "workaround"
+  
+  # Exposure context terms (package risk categorization)
+  exposure_terms:
+    network_communication:
+      - "http"
+      - "request"
+      - "client"
+      - "rest"
+      - "api"
+      - "curl"
+      - "fetch"
+      - "socket"
+      - "tcp"
+      - "udp"
+      - "net"
+      - "protocol"
+    web_frameworks:
+      - "web"
+      - "server"
+      - "framework"
+      - "app"
+      - "express"
+      - "koa"
+      - "fastify"
+    data_processing:
+      - "parse"
+      - "xml"
+      - "json"
+      - "yaml"
+      - "csv"
+      - "html"
+      - "markdown"
+      - "file"
+      - "io"
+      - "stream"
+    security_crypto:
+      - "auth"
+      - "jwt"
+      - "oauth"
+      - "crypto"
+      - "hash"
+      - "encrypt"
+      - "ssl"
+      - "tls"
+    database_access:
+      - "db"
+      - "database"
+      - "sql"
+      - "mongo"
+      - "redis"
+      - "orm"
+      - "query"
+  
+  # Credibility source indicators
+  trusted_sources:
+    - "nvd"
+    - "mitre"
+    - "cve"
+    - "github"
+    - "snyk"
+    - "redhat"
+    - "debian"
+
+# Exposure context configuration  
+exposure_context:
+  # Risk multipliers for different package categories
+  network_communication: 0.8   # HTTP clients, REST APIs, network protocols
+  web_frameworks: 0.7         # Web servers, frameworks, request handlers
+  data_processing: 0.6        # Parsers, file processors, data converters
+  security_crypto: 0.6        # Auth libraries, crypto, SSL/TLS
+  database_access: 0.4        # Database drivers, ORMs, query builders
+  base_exposure: 0.2          # Minimum exposure for any package
+
+# Display preferences
+display:
+  verbose_risk_breakdown: true    # Show risk component scores (compact format by default)
+  show_exploit_indicators: true   # Display specific exploit pressure indicators
+  show_methodology: false         # Include scoring methodology in output
+  compact_format: false          # Legacy setting (compact is now default)

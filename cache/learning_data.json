@@ -1,0 +1,317 @@
+{
+  "package_popularity": {
+    "maven:org.elasticsearch:elasticsearch": {
+      "popularity": 40.0,
+      "last_seen": 1763082232.981938,
+      "metadata_quality": 0.0
+    },
+    "maven:org.apache.struts:struts2-core": {
+      "popularity": 40.0,
+      "last_seen": 1763082233.40575,
+      "metadata_quality": 0.0
+    },
+    "maven:org.openapitools:openapi-generator": {
+      "popularity": 40.0,
+      "last_seen": 1763082233.946422,
+      "metadata_quality": 0.0
+    },
+    "maven:org.cloudfoundry.identity:cloudfoundry-identity-server": {
+      "popularity": 65.0,
+      "last_seen": 1763082234.0634298,
+      "metadata_quality": 0.0
+    },
+    "maven:org.apache.cassandra:apache-cassandra": {
+      "popularity": 39.35677240097363,
+      "last_seen": 1763082234.88743,
+      "metadata_quality": 0.0
+    },
+    "maven:org.apache.tomcat:tomcat": {
+      "popularity": 39.35677240196108,
+      "last_seen": 1763082234.893653,
+      "metadata_quality": 0.0
+    },
+    "maven:org.apereo.cas:cas-server-core-services-api": {
+      "popularity": 39.356772402033585,
+      "last_seen": 1763082234.89411,
+      "metadata_quality": 0.0
+    },
+    "maven:org.mongodb:mongodb-driver": {
+      "popularity": 52.20124888972301,
+      "last_seen": 1763082234.997267,
+      "metadata_quality": 0.0
+    },
+    "maven:org.springframework:spring-beans": {
+      "popularity": 39.35677242397527,
+      "last_seen": 1763082235.0325062,
+      "metadata_quality": 0.0
+    },
+    "maven:org.postgresql:postgresql": {
+      "popularity": 40.0,
+      "last_seen": 1763082235.046599,
+      "metadata_quality": 0.0
+    },
+    "maven:com.fasterxml.jackson.core:jackson-databind": {
+      "popularity": 40.0,
+      "last_seen": 1763082235.0955598,
+      "metadata_quality": 0.0
+    },
+    "maven:org.springframework.security:spring-security-core": {
+      "popularity": 90.0,
+      "last_seen": 1763082235.1736372,
+      "metadata_quality": 0.0
+    },
+    "maven:commons-lang:commons-lang": {
+      "popularity": 49.0,
+      "last_seen": 1763082235.244253,
+      "metadata_quality": 0.0
+    },
+    "maven:com.liferay.portal:release.dxp.bom": {
+      "popularity": 40.0,
+      "last_seen": 1763082235.386346,
+      "metadata_quality": 0.0
+    },
+    "maven:org.springframework:spring-webflux": {
+      "popularity": 40.0,
+      "last_seen": 1763082235.4980328,
+      "metadata_quality": 0.0
+    },
+    "maven:org.springframework:spring-context": {
+      "popularity": 40.0,
+      "last_seen": 1763082235.595982,
+      "metadata_quality": 0.0
+    },
+    "maven:org.apache.activemq:apache-activemq": {
+      "popularity": 40.0,
+      "last_seen": 1763082235.693584,
+      "metadata_quality": 0.0
+    },
+    "maven:org.jenkins-ci.plugins:config-file-provider": {
+      "popularity": 39.35677275148389,
+      "last_seen": 1763082237.098165,
+      "metadata_quality": 0.0
+    },
+    "maven:org.apache.myfaces.core:myfaces-impl": {
+      "popularity": 39.356772771736274,
+      "last_seen": 1763082237.225905,
+      "metadata_quality": 0.0
+    },
+    "maven:com.liferay.portal:release.portal.bom": {
+      "popularity": 39.35677295387082,
+      "last_seen": 1763082238.3746638,
+      "metadata_quality": 0.0
+    },
+    "pypi:requests-plus": {
+      "popularity": 10.74,
+      "last_seen": 1783979474.609308,
+      "metadata_quality": 0.7
+    },
+    "pypi:salt": {
+      "popularity": 83.0,
+      "last_seen": 1763082306.779988,
+      "metadata_quality": 1.0
+    },
+    "pypi:trytond": {
+      "popularity": 66.95,
+      "last_seen": 1783979474.6382148,
+      "metadata_quality": 0.8999999999999999
+    },
+    "pypi:indy-node": {
+      "popularity": 65.12,
+      "last_seen": 1783979475.635412,
+      "metadata_quality": 1.0
+    },
+    "pypi:instack-undercloud": {
+      "popularity": 41.18,
+      "last_seen": 1783979474.663875,
+      "metadata_quality": 0.8999999999999999
+    },
+    "pypi:recurly": {
+      "popularity": 103.91,
+      "last_seen": 1763082307.062596,
+      "metadata_quality": 0.8999999999999999
+    },
+    "pypi:py2web": {
+      "popularity": 44.91,
+      "last_seen": 1783979474.662766,
+      "metadata_quality": 0.8999999999999999
+    },
+    "pypi:http-parser": {
+      "popularity": 78.0,
+      "last_seen": 1783979475.127143,
+      "metadata_quality": 1.0
+    },
+    "pypi:beautifulsoup": {
+      "popularity": 25.17,
+      "last_seen": 1783979475.636557,
+      "metadata_quality": 1.0
+    },
+    "pypi:tensorflow-gpu": {
+      "popularity": 78.18,
+      "last_seen": 1783979476.084225,
+      "metadata_quality": 1.0
+    },
+    "pypi:uniapi": {
+      "popularity": 43.9,
+      "last_seen": 1783979476.162038,
+      "metadata_quality": 0.8999999999999999
+    },
+    "pypi:html5lib": {
+      "popularity": 73.5,
+      "last_seen": 1783979476.151231,
+      "metadata_quality": 1.0
+    },
+    "pypi:keylime": {
+      "popularity": 88.5,
+      "last_seen": 1783979515.5977721,
+      "metadata_quality": 1.0
+    },
+    "pypi:vantage6": {
+      "popularity": 105.0,
+      "last_seen": 1763082346.62588,
+      "metadata_quality": 0.7
+    },
+    "pypi:ekuiper": {
+      "popularity": 95.38,
+      "last_seen": 1783979516.6452281,
+      "metadata_quality": 1.0
+    },
+    "pypi:nova": {
+      "popularity": 75.0,
+      "last_seen": 1783979517.166193,
+      "metadata_quality": 0.8
+    },
+    "pypi:transformers": {
+      "popularity": 115.0,
+      "last_seen": 1763082348.70105,
+      "metadata_quality": 1.0
+    },
+    "pypi:pyopenssl": {
+      "popularity": 92.0,
+      "last_seen": 1783979518.234672,
+      "metadata_quality": 1.0
+    },
+    "pypi:jupyter-server": {
+      "popularity": 99.0,
+      "last_seen": 1783979518.7066119,
+      "metadata_quality": 0.8
+    },
+    "pypi:jinja2": {
+      "popularity": 58.129999999999995,
+      "last_seen": 1783979519.199063,
+      "metadata_quality": 0.7
+    },
+    "pypi:markdown2": {
+      "popularity": 78.24000000000001,
+      "last_seen": 1783979519.68302,
+      "metadata_quality": 1.0
+    },
+    "pypi:qutebrowser": {
+      "popularity": 65.0,
+      "last_seen": 1783979520.1788852,
+      "metadata_quality": 1.0
+    },
+    "pypi:easybuild-framework": {
+      "popularity": 62.010000000000005,
+      "last_seen": 1783979520.693228,
+      "metadata_quality": 1.0
+    },
+    "pypi:zodb3": {
+      "popularity": 48.84,
+      "last_seen": 1783979521.17275,
+      "metadata_quality": 1.0
+    },
+    "pypi:django": {
+      "popularity": 90.0,
+      "last_seen": 1783979521.684331,
+      "metadata_quality": 0.7
+    },
+    "pypi:irrd": {
+      "popularity": 126.5,
+      "last_seen": 1783975415.897723,
+      "metadata_quality": 1.0
+    },
+    "pypi:products-atcontenttypes": {
+      "popularity": 55.0,
+      "last_seen": 1783979522.738463,
+      "metadata_quality": 1.0
+    },
+    "pypi:mistune": {
+      "popularity": 89.34,
+      "last_seen": 1783979523.2522628,
+      "metadata_quality": 0.8
+    },
+    "pypi:vyper": {
+      "popularity": 115.0,
+      "last_seen": 1763082351.7274618,
+      "metadata_quality": 1.0
+    },
+    "pypi:pip-requirements-parser": {
+      "popularity": 63.0,
+      "last_seen": 1783979848.776299,
+      "metadata_quality": 1.0
+    },
+    "pypi:python-levenshtein": {
+      "popularity": 96.0,
+      "last_seen": 1783979847.7144132,
+      "metadata_quality": 0.8
+    },
+    "pypi:thefuzz": {
+      "popularity": 62.0,
+      "last_seen": 1783979847.714815,
+      "metadata_quality": 1.0
+    },
+    "pypi:cvss": {
+      "popularity": 136.0,
+      "last_seen": 1783974797.509357,
+      "metadata_quality": 1.0
+    },
+    "pypi:defusedxml": {
+      "popularity": 66.5,
+      "last_seen": 1783979848.41852,
+      "metadata_quality": 1.0
+    },
+    "pypi:pytest": {
+      "popularity": 113.0,
+      "last_seen": 1783979848.6352088,
+      "metadata_quality": 0.8999999999999999
+    },
+    "pypi:aiohttp": {
+      "popularity": 135.0,
+      "last_seen": 1783974797.943966,
+      "metadata_quality": 0.8
+    },
+    "pypi:hypothesis": {
+      "popularity": 101.38,
+      "last_seen": 1783979849.2466428,
+      "metadata_quality": 0.7
+    },
+    "pypi:flake8": {
+      "popularity": 85.0,
+      "last_seen": 1783979850.0898209,
+      "metadata_quality": 1.0
+    },
+    "pypi:requestsplus": {
+      "popularity": 43.1,
+      "last_seen": 1783978570.872822,
+      "metadata_quality": 1.0
+    }
+  },
+  "ecosystem_stats": {
+    "pypi": {
+      "total_packages": 176,
+      "avg_popularity": 71.14528409090907
+    },
+    "npm": {
+      "total_packages": 0,
+      "avg_popularity": 0
+    },
+    "maven": {
+      "total_packages": 20,
+      "avg_popularity": 44.584932849787876
+    }
+  },
+  "last_updated": 1783979850.0898418,
+  "similarity_patterns": {},
+  "false_positives": [],
+  "confirmed_typosquats": []
+}

@@ -1,0 +1,11 @@
+{
+  "lockfileVersion": 1,
+  "dependencies": {
+    "lodash": {
+      "version": "4.17.11"
+    },
+    "express": {
+      "version": "4.18.2"
+    }
+  }
+}

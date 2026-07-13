@@ -1,0 +1,102 @@
+# =============================================================================
+# Python
+# =============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# =============================================================================
+# Virtual environments
+# =============================================================================
+.venv/
+venv/
+ENV/
+env/
+
+# =============================================================================
+# Testing & property-based testing
+# =============================================================================
+.pytest_cache/
+.coverage
+htmlcov/
+.hypothesis/
+
+# =============================================================================
+# IDE & editor
+# =============================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# =============================================================================
+# OS
+# =============================================================================
+.DS_Store
+Thumbs.db
+
+# =============================================================================
+# Kiro AI workspace files
+# =============================================================================
+.kiro/
+
+# =============================================================================
+# Cache — runtime data, rebuilt automatically on each scan
+# Subdirectories contain thousands of API response files that are:
+#   - Too large for a repo (~MB of JSON)
+#   - User/environment specific (expire by TTL)
+#   - Rebuilt on first run automatically
+# =============================================================================
+cache/nvd/
+cache/osv/
+cache/pkg_metadata/
+
+# Keep learned detection patterns — these represent accumulated knowledge about
+# package ecosystems and improve typosquat detection for anyone who clones the repo.
+# cache/learned_patterns.json   → tracked
+# cache/learning_data.json      → tracked
+# cache/popular_packages.json   → tracked
+
+# =============================================================================
+# Logs & debug artifacts
+# =============================================================================
+*.log
+debug_*.py
+
+# =============================================================================
+# Generated output / report files
+# =============================================================================
+output.json
+report.json
+tests/fixtures/output*.json
+
+# =============================================================================
+# Large binary files not needed in the repo
+# =============================================================================
+*.pdf
+
+# =============================================================================
+# Node / Maven lock files (not needed for a Python project)
+# These are sample dependency files used for scanner testing, now in test_files/.
+# Uncomment if you want to exclude them:
+# test_files/package-lock.json
+# test_files/pom.xml
+# =============================================================================

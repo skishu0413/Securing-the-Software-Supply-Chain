@@ -1,0 +1,238 @@
+<?xml version="1.0" ?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <!-- Maven Vulnerability and Suspicious Pattern Dataset -->
+  <!-- For Software Supply Chain Security Testing -->
+  <!-- DO NOT BUILD - Contains vulnerable and suspicious dependencies -->
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.security.test</groupId>
+  <artifactId>supply-chain-security-test</artifactId>
+  <version>1.0.0</version>
+  <packaging>jar</packaging>
+  <dependencies>
+    <dependency>
+      <groupId>org.elasticsearch</groupId>
+      <artifactId>elasticsearch</artifactId>
+      <version>2.9.8</version>
+    </dependency>
+
+    <!-- DEPENDENCY CONFUSION: Unusual version 99.9.9 -->
+    <dependency>
+      <groupId>com.corp.internal</groupId>
+      <artifactId>api-client</artifactId>
+      <version>99.9.9</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.cassandra</groupId>
+      <artifactId>apache-cassandra</artifactId>
+      <version>2.1.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apereo.cas</groupId>
+      <artifactId>cas-server-core-services-api</artifactId>
+      <version>2.14.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat</artifactId>
+      <version>7.0.41</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-beans</artifactId>
+      <version>5.3.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.jenkins-ci.plugins</groupId>
+      <artifactId>rapiddeploy-jenkins</artifactId>
+      <version>1.9</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.struts</groupId>
+      <artifactId>struts2-core</artifactId>
+      <version>3.12.0</version>
+    </dependency>
+
+    <!-- DEPENDENCY CONFUSION: Unusual version 150.0.0 -->
+    <dependency>
+      <groupId>com.internal</groupId>
+      <artifactId>database-connector</artifactId>
+      <version>150.0.0</version>
+    </dependency>
+
+
+
+    <dependency>
+      <groupId>org.example</groupId>
+      <artifactId>my-app</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+
+
+    <!-- DEPENDENCY CONFUSION: Unusual version 500.0.0 -->
+    <dependency>
+      <groupId>com.company</groupId>
+      <artifactId>logging-framework</artifactId>
+      <version>500.0.0</version>
+    </dependency>
+    <!-- DEPENDENCY CONFUSION: Unusual version 999.0.0 -->
+    <dependency>
+      <groupId>com.private</groupId>
+      <artifactId>authentication</artifactId>
+      <version>999.0.0</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>org.openapitools</groupId>
+      <artifactId>openapi-generator</artifactId>
+      <version>2.3.20</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.cloudfoundry.identity</groupId>
+      <artifactId>cloudfoundry-identity-server</artifactId>
+      <version>4.11.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.github.leetcrunch</groupId>
+      <artifactId>scribejava-core</artifactId>
+      <version>2.17.0</version>
+    </dependency>
+
+    <!-- DEPENDENCY CONFUSION: Unusual version 300.0.0 -->
+    <dependency>
+      <groupId>org.myorg</groupId>
+      <artifactId>data-processor</artifactId>
+      <version>300.0.0</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>org.mongodb</groupId>
+      <artifactId>mongodb-driver</artifactId>
+      <version>3.12.0</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>42.1.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.13.0</version>
+    </dependency>
+
+
+
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-core</artifactId>
+      <version>3.0.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.jenkins-ci.plugins</groupId>
+      <artifactId>config-file-provider</artifactId>
+      <version>2.9.8</version>
+    </dependency>
+
+    <!-- ABANDONED: Last update 2011 - deprecated_use_commons_lang3 -->
+    <dependency>
+      <groupId>commons-lang</groupId>
+      <artifactId>commons-lang</artifactId>
+      <version>2.6</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.myfaces.core</groupId>
+      <artifactId>myfaces-impl</artifactId>
+      <version>1.2.0</version>
+    </dependency>
+
+
+
+    <dependency>
+      <groupId>com.liferay.portal</groupId>
+      <artifactId>release.dxp.bom</artifactId>
+      <version>3.12.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webflux</artifactId>
+      <version>1.30</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>2.3.20</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>apache-activemq</artifactId>
+      <version>3.12.0</version>
+    </dependency>
+
+    <!-- DEPENDENCY CONFUSION: Unusual version 99.0.0 -->
+    <dependency>
+      <groupId>com.mycompany.internal</groupId>
+      <artifactId>auth-library</artifactId>
+      <version>99.0.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.jenkins-ci.plugins</groupId>
+      <artifactId>saltstack</artifactId>
+      <version>2.3.20</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.liferay.portal</groupId>
+      <artifactId>release.portal.bom</artifactId>
+      <version>2.14.1</version>
+    </dependency>
+    <!-- DEPENDENCY CONFUSION: Unusual version 200.0.0 -->
+    <dependency>
+      <groupId>org.enterprise</groupId>
+      <artifactId>security-module</artifactId>
+      <version>200.0.0</version>
+    </dependency>
+    
+    <!-- TYPOSQUATTING EXAMPLES: These would be detected if they existed on Maven Central -->
+    <!-- These are currently flagged as Dependency Confusion since they don't exist -->
+    <dependency>
+      <groupId>org.apache.commmons</groupId> <!-- Extra 'm' in commons -->
+      <artifactId>commons-lang3</artifactId>
+      <version>3.12.0</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.springframwork</groupId> <!-- Missing 'e' in framework -->
+      <artifactId>spring-core</artifactId>
+      <version>5.3.21</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>com.fasterxml.jacksoon</groupId> <!-- Extra 'o' in jackson -->
+      <artifactId>jackson-core</artifactId>
+      <version>2.13.3</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.hybernate</groupId> <!-- 'i' -> 'y' substitution in hibernate -->
+      <artifactId>hibernate-core</artifactId>
+      <version>5.6.9</version>
+    </dependency>
+
+
+  </dependencies>
+</project>
