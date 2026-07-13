@@ -88,6 +88,14 @@ python3 src/main.py --show-methodology
 
 ## Sample output
 
+### Vulnerability report
+![Vulnerability Report](docs/Vulnerability_Report.png)
+
+### Suspicious package report
+![Suspicious Packages](docs/Suspicious_Packages_Report.png)
+
+---
+
 ```
 --- Vulnerability Report ---
 
